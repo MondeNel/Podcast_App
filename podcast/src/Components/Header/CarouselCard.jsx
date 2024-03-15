@@ -35,7 +35,7 @@ const CarouselCard = () => {
       <Slider {...settings}>
         {cardData.map((text, index) => (
           <div className={styles.card} key={index}>
-            <img src={image} alt={text} />
+            <img src={image} alt={text} className={styles.card_image} />
             <h3>{text}</h3>
           </div>
         ))}

@@ -13,6 +13,9 @@
         text-align: center;
         width: 150px; 
         margin: 0 10px 20px 10px;
+
+        display: flex;
+        justify-content: space-evenly;
       }
 
       .carousel_container h2{
@@ -23,6 +26,146 @@
 
       .carousel_container h3{
         font-size: 14px;
+        font-weight: 500;
+      }
+}
+
+
+@media only screen and (min-width: 395px) and (max-width: 475px){
+    .carousel_container{
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        text-align: center;
+        width: 150px; 
+        margin: 0 10px 20px 10px;
+
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .card_image {
+        display: block;
+        margin: 0 auto;
+      }
+      
+
+      .carousel_container h2{
+        font-size: 14px;
+        margin: 10px 20px;
+        font-weight: 700;
+      }
+
+      .carousel_container h3{
+        font-size: 14px;
+        font-weight: 500;
+      }
+}
+
+
+
+@media only screen and (min-width: 476px) and (max-width: 750px){
+    .carousel_container{
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        text-align: center;
+        width: 250px; 
+        margin: 0 10px 20px 10px;
+      }
+
+      .card_image {
+        display: block;
+        margin: 0 auto; 
+      }
+      
+
+      .carousel_container h2{
+        font-size: 16px;
+        margin: 10px 20px;
+        font-weight: 700;
+      }
+
+      .carousel_container h3{
+        font-size: 16px;
+        font-weight: 500;
+      }
+}
+
+
+@media only screen and (min-width: 751px) and (max-width: 979px){
+    .carousel_container{
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        text-align: center;
+        width: 150px; 
+        margin: 0 10px 20px 10px;
+      }
+
+      .card_image {
+        display: block;
+        margin: 0 auto; 
+      }
+      
+
+      .carousel_container h2{
+        font-size: 14px;
+        margin: 10px 20px;
+        font-weight: 700;
+      }
+
+      .carousel_container h3{
+        font-size: 14px;
+        font-weight: 500;
+      }
+}
+
+
+@media only screen and (min-width: 979px) and (max-width: 1500px){
+    .carousel_container{
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        text-align: center;
+        width: 150px; 
+        margin: 0 10px 20px 10px;
+      }
+
+      .card_image {
+        display: block;
+        margin: 0 auto; 
+      }
+      
+
+      .carousel_container h2{
+        font-size: 20px;
+        margin: 10px 20px;
+        font-weight: 700;
+      }
+
+      .carousel_container h3{
+        font-size: 16px;
         font-weight: 500;
       }
 }
