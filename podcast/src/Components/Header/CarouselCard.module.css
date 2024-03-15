@@ -28,6 +28,31 @@
         font-size: 14px;
         font-weight: 500;
       }
+
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+      
+      .button {
+        background-color: #009688;
+        color: white;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .icon {
+        margin-left: auto;
+      }
+
+      .card h3, h4, p{
+        font-size: 14px;
+      }
 }
 
 
@@ -65,6 +90,29 @@
         font-size: 14px;
         font-weight: 500;
       }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .button {
+        background-color: #009688;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .icon {
+        margin-left: auto;
+      }
+
+      .card h3, h4, p{
+        font-size: 14px;
+      }
 }
 
 
@@ -100,6 +148,29 @@
         font-size: 16px;
         font-weight: 500;
       }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .button {
+        background-color: #009688;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .icon {
+        margin-left: auto;
+      }
+
+      .card h3, h4, p{
+        font-size: 16px;
+      }
 }
 
 
@@ -134,6 +205,29 @@
         font-size: 14px;
         font-weight: 500;
       }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .button {
+        background-color: #009688;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .icon {
+        margin-left: auto;
+      }
+
+      .card h3, h4, p{
+        font-size: 18px;
+      }
 }
 
 
@@ -167,6 +261,29 @@
       .carousel_container h3{
         font-size: 16px;
         font-weight: 500;
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .button {
+        background-color: #009688;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .icon {
+        margin-left: auto;
+      }
+
+      .card h3, h4, p{
+        font-size: 20px;
       }
 }
 
