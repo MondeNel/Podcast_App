@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import styles from './Search.module.css'; // Import the CSS module
 import Fuse from 'fuse.js';
 
 const API_URL = 'https://podcast-api.netlify.app/shows';
@@ -67,19 +68,19 @@ const Search = () => {
     };
 
     return (
-        <div className="input__wrapper">
-            <SearchIcon className='search__icon' />
+        <div className={styles.input__wrapper}> {/* Use the CSS class from the module */}
+            <SearchIcon className={styles.search__icon} /> {/* Use the CSS class from the module */}
             <input
                 type="text"
-                className="input"
+                className={styles.input} 
                 placeholder="Type to search..."
                 value={input}
                 onChange={(e) => handleChange(e.target.value)}
             />
-            <div className={`result__box ${showResults ? 'show' : ''}`}>
-                <ul className="result__list">
+            <div className={`${styles.result__box} ${showResults ? styles.show : ''}`}> {/* Use the CSS classes from the module */}
+                <ul className={styles.result__list}> {/* Use the CSS class from the module */}
                     {filteredData.map((show) => (
-                        <li key={show.id} className="result" onClick={() => openResultsDialog(show)}>
+                        <li key={show.id} className={styles.result} onClick={() => openResultsDialog(show)}>
                             {show.title}
                         </li>
                     ))}
