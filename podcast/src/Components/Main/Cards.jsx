@@ -1,21 +1,39 @@
-import React from 'react';
-import styles from './Cards.module.css'; // Assuming you have a CSS module for styling
+import React, { useState } from 'react';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import styles from './Cards.module.css'; 
 
-import { showsData } from '../Data'; // Assuming showsData is exported from '../Data'
+import { showsData } from '../Data'; 
 
 function ShowCard({ show }) {
-  return (
-    <div className={styles.card}>
-      <img src={show.image} alt={show.title} />
-      <div className={styles.cardBody}>
-        <h3>{show.title}</h3>
-        <p>Seasons: {show.seasons}</p>
-        <p>Episodes: {show.episodes}</p>
-        <p>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>
+
+    const [iconColor, setIconColor] = useState('grey');
+
+  const handleIconClick = () => {
+    setIconColor(iconColor === 'grey' ? 'red' : 'grey');
+  };
+
+    return (
+      <div className={styles.card}>
+        <img src={show.image} alt={show.title} />
+        <div className={styles.cardBody}>
+          <h3 className={styles.title}>{show.title}</h3>
+          <p className={styles.seasons}>Seasons: {show.seasons}</p>
+          <p className={styles.episodes}>Episodes: {show.episodes}</p>
+          <p className={styles.date}>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>
+          <div className={styles.icons}>
+            <PlayCircleOutlineIcon className={styles.playButton} />
+            <FavoriteIcon
+                className={styles.favoriteIcon}
+                style={{ color: iconColor }}
+                onClick={handleIconClick}
+              />
+          </div>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+  
 
 function ShowList() {
   return (
