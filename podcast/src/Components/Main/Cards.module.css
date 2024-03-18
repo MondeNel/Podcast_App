@@ -63,3 +63,82 @@
  
 }
 
+
+@media only screen and (min-width: 395px) and (max-width: 475px){
+    .container {
+        padding: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .container:hover {
+        transform: scale(1.1);
+    }
+    
+      .heading_title {
+        font-size: 16px;
+        margin: 15px 10px;
+        padding: 10px;
+      }
+      
+      .cardList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        overflow: hidden;
+        padding: 5px;
+      }
+      
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .cardBody {
+        padding: 10px;
+      }
+
+   .title {
+        font-size: 10px;
+      } 
+
+    .seasons, .episodes, .date {
+        font-size: 8px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+      }
+
+    .icons .playButton {
+        font-size: 16px;
+        color: red;
+        border: none;
+    }
+
+    .icons .favoriteIcon{
+        font-size: 16px;
+    }
+ 
+}
+
+
+@media only screen and (min-width: 476px) and (max-width: 750px){
+
+}
+
+
+@media only screen and (min-width: 751px) and (max-width: 979px){
+
+}
+
+@media only screen and (min-width: 979px) and (max-width: 1500px){
+    
+}
