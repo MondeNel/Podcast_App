@@ -55,7 +55,7 @@ const CarouselCard = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '60px',
@@ -64,7 +64,7 @@ const CarouselCard = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerPadding: '20px',
+          centerPadding: '80px',
         },
       },
     ],
@@ -88,7 +88,7 @@ const CarouselCard = () => {
             <p>Seasons: {show.seasons}</p>
             <p>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>
             <div className={styles.bottom}>
-              <button className={styles.button}>View Details</button>
+              <button className={styles.button}>View show</button>
               <FavoriteIcon
                 className={styles.icon}
                 style={{ color: iconColor }}

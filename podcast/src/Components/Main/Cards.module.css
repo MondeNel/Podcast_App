@@ -2,6 +2,7 @@
     .container {
         padding: 5px;
         transition: transform 0.3s ease;
+        box-shadow: 1px solid black;
       }
 
       .container:hover {
@@ -25,11 +26,14 @@
         border-radius: 3px;
         overflow: hidden;
         padding: 5px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       }
       
       .card img {
         width: 100%;
         height: auto;
+        border-radius: 4px;
       }
       
       .cardBody {
@@ -55,10 +59,12 @@
         font-size: 16px;
         color: red;
         border: none;
+        cursor: pointer;
     }
 
     .icons .favoriteIcon{
         font-size: 16px;
+        cursor: pointer;
     }
  
 }
@@ -91,7 +97,10 @@
         border-radius: 3px;
         overflow: hidden;
         padding: 5px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       }
+      
       
       .card img {
         width: 100%;
@@ -121,10 +130,12 @@
         font-size: 16px;
         color: red;
         border: none;
+        cursor: pointer;
     }
 
     .icons .favoriteIcon{
         font-size: 16px;
+        cursor: pointer;
     }
  
 }
@@ -157,7 +168,10 @@
         border-radius: 3px;
         overflow: hidden;
         padding: 5px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       }
+      
       
       .card img {
         width: 100%;
@@ -187,10 +201,12 @@
         font-size: 24px;
         color: red;
         border: none;
+        cursor: pointer;
     }
 
     .icons .favoriteIcon{
         font-size: 24px;
+        cursor: pointer;
     }
 }
 
@@ -222,6 +238,8 @@
         border-radius: 3px;
         overflow: hidden;
         padding: 5px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       }
       
       .card img {
@@ -252,10 +270,12 @@
         font-size: 24px;
         color: red;
         border: none;
+        cursor: pointer;
     }
 
     .icons .favoriteIcon{
         font-size: 24px;
+        cursor: pointer;
     }
 }
 
@@ -270,7 +290,7 @@
     }  */
     
       .heading_title {
-        font-size: 20px;
+        font-size: 18px;
         margin: 15px 10px;
         padding: 10px;
       }
@@ -286,6 +306,8 @@
         border-radius: 3px;
         overflow: hidden;
         padding: 5px;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       }
       
       .card img {
@@ -313,12 +335,14 @@
       }
 
     .icons .playButton {
-        font-size: 30px;
+        font-size: 22px;
         color: red;
         border: none;
+        cursor: pointer;
     }
 
     .icons .favoriteIcon{
         font-size: 30px;
+        cursor: pointer;
     }
 }

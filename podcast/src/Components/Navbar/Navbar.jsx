@@ -3,10 +3,9 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
 import logo from '../../assets/faviconio-logo/logoNote.jpg';
 import styles from './Navbar.module.css'; 
+import Search from './Search'; // Import the Search component
 
 const Navbar = () => {
   return (
@@ -14,14 +13,7 @@ const Navbar = () => {
       <Toolbar>
         <img src={logo} alt="Logo" className={styles.logo} />
         <div className={styles.text}>Podcast</div>
-        <div className={styles.search}>
-          <div className={styles.searchIcon}>
-          </div>
-          <InputBase
-            placeholder="Search..."
-            inputProps={{ 'aria-label': 'search' }}
-          />
-        </div>
+        <Search /> 
         <IconButton
           edge="start"
           color="inherit"
