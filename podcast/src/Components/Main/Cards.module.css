@@ -1,11 +1,17 @@
 @media only screen and (max-width: 395px) {
     .container {
         padding: 5px;
+        transition: transform 0.3s ease;
       }
+
+      .container:hover {
+        transform: scale(1.1);
+    }
     
-      .heading_title{
-        font-size: 18px;
-        margin: 20px 10px;
+      .heading_title {
+        font-size: 16px;
+        margin: 15px 10px;
+        padding: 10px;
       }
       
       .cardList {
@@ -16,8 +22,9 @@
       
       .card {
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 3px;
         overflow: hidden;
+        padding: 5px;
       }
       
       .card img {
@@ -53,7 +60,6 @@
     .icons .favoriteIcon{
         font-size: 16px;
     }
-
-      
+ 
 }
 
