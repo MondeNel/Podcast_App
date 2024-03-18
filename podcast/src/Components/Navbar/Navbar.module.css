@@ -82,14 +82,11 @@
     width: 100%;
     z-index: 1000;
     border-radius: 3px;
+    padding: 5px;
   }
   
   .logo {
-    margin-top: 5px;
-    height: 50px;
-    margin-left: 16px; /* Move logo to the far left */
-    margin-bottom: 5px;
-    border-radius: 100%;
+   display: none;
   }
   
   .text {
@@ -127,11 +124,7 @@
   }
   
   .logo {
-    margin-top: 5px;
-    height: 50px;
-    margin-left: 16px; /* Move logo to the far left */
-    margin-bottom: 5px;
-    border-radius: 100%;
+    display: none;
   }
   
   .text {
@@ -169,11 +162,7 @@
   }
   
   .logo {
-    margin-top: 5px;
-    height: 50px;
-    margin-left: 16px; /* Move logo to the far left */
-    margin-bottom: 5px;
-    border-radius: 100%;
+    display: none;
   }
   
   .text {

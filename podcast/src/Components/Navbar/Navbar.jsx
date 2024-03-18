@@ -13,7 +13,7 @@ const Navbar = () => {
     <AppBar position="static" className={styles.navbar}>
       <Toolbar>
         <img src={logo} alt="Logo" className={styles.logo} />
-        <div className={styles.text}>Lizz</div>
+        <div className={styles.text}>Podcast</div>
         <div className={styles.search}>
           <div className={styles.searchIcon}>
           </div>
