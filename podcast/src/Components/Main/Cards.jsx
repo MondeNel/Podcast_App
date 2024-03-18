@@ -7,7 +7,7 @@ import { showsData } from '../Data';
 
 function ShowCard({ show }) {
 
-    const [iconColor, setIconColor] = useState('grey');
+  const [iconColor, setIconColor] = useState('grey');
 
   const handleIconClick = () => {
     setIconColor(iconColor === 'grey' ? 'red' : 'grey');

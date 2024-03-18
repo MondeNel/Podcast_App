@@ -255,13 +255,13 @@
 
 @media only screen and (min-width: 979px) and (max-width: 1500px){
   .carousel_container {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
   }
 
   .heading {
     font-size: 22px;
-    margin: 10px 20px;
+    margin: 10px 10px;
   }
 
   .card {
