@@ -34,7 +34,12 @@ function ShowCard({ show }) {
         <p className={styles.seasons}>Seasons: {show.seasons}</p>
         <p className={styles.episodes}>Episodes: {show.episodes}</p>
         <p className={styles.date}>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>
-        <p className={styles.genres}>{show.genres.map((genreId) => genreMapping[genreId]).join(", ")}</p>
+        <p className={styles.genres}>
+                {show.genres.map((genreId) => {
+                  const genreName = genreMapping[genreId];
+                  return genreName.length > 10 ? genreName.slice(0, 10) + '...' : genreName;
+                })}
+              </p>
         <div className={styles.icons}>
           <PlayCircleOutlineIcon className={styles.playButton} />
           <FavoriteIcon

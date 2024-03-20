@@ -74,6 +74,7 @@
     }
 
     .genres{
+      font-size: 8px;
       font-weight: 800;
     }
 
@@ -156,6 +157,7 @@
     }
 
     .genres{
+      font-size: 8px;
       font-weight: 800;
     }
 }
@@ -238,6 +240,7 @@
     }
 
     .genres{
+      font-size: 16px;
       font-weight: 800;
     }
 
@@ -321,6 +324,7 @@
     }
 
     .genres{
+      font-size: 16px;
       font-weight: 800;
     }
 
@@ -377,12 +381,12 @@
         font-size: 16px;
     }
 
-    .icons {
+    .card .icons {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 5px;
-      }
+        margin: 10px;
+    }
 
     .icons .playButton {
         font-size: 28px;
@@ -401,6 +405,7 @@
     }
 
     .genres{
+      font-size: 16px;
       font-weight: 800;
     }
 }
