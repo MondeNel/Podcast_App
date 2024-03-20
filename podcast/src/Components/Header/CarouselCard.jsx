@@ -6,6 +6,7 @@ import styles from './CarouselCard.module.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Dialog from '@mui/material/Dialog';
 import { DialogTitle, DialogContent, Typography, Select, MenuItem } from '@mui/material';
+import { PlayCircleOutline } from '@mui/icons-material';
 
 const showsData = [
   {
@@ -136,10 +137,10 @@ const CarouselCard = () => {
       <Dialog open={true} onClose={onClose}>
         {show && (
           <>
-            <DialogTitle>{show.title}</DialogTitle>
-            <DialogContent>
-              <Typography variant="body1">{show.description}</Typography>
-              <Typography variant="body1">Seasons:</Typography>
+            <DialogTitle className={styles.dialogTitle}>{show.title}</DialogTitle>
+            <DialogContent className={styles.dialogContent}>
+              <Typography className={styles.description}>{show.description}</Typography>
+              <Typography className={styles.seasons}>Seasons:</Typography>
               <Select value={selectedSeason} onChange={handleSeasonChange}>
                 {show.seasons.map((season, index) => (
                   <MenuItem key={index} value={season}>
@@ -148,13 +149,15 @@ const CarouselCard = () => {
                 ))}
               </Select>
               {selectedSeason && (
-                <div>
-                  <Typography variant="body1">Episodes:</Typography>
-                  <ul>
+                <div className={styles.episodeList}>
+                  <ol>
                     {selectedSeason.episodes.map((episode, index) => (
-                      <li key={index}>{episode.title}</li>
+                      <li key={index} className={styles.episodeItem}>
+                        <PlayCircleOutline style={{ color: 'red' }} />
+                        <span className={styles.episodeTitle}>{episode.title}</span>
+                      </li>
                     ))}
-                  </ul>
+                  </ol>
                 </div>
               )}
             </DialogContent>
@@ -163,7 +166,6 @@ const CarouselCard = () => {
       </Dialog>
     );
   };
-  
 
 
   return (
@@ -177,7 +179,12 @@ const CarouselCard = () => {
               <img src={show.image} alt={show.title} className={styles.card_image} />
               <p>Seasons: {show.seasons}</p>
               <p>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>
-              <p className={styles.genres}>{show.genres.map((genreId) => genreMapping[genreId]).join(", ")}</p>
+              <p className={styles.genres}>
+                {show.genres.map((genreId) => {
+                  const genreName = genreMapping[genreId];
+                  return genreName.length > 10 ? genreName.slice(0, 10) + '...' : genreName;
+                })}
+              </p>
               <div className={styles.bottom}>
                 <button className={styles.button} onClick={() => handleViewShow(show)}>View show</button>
                 <FavoriteIcon

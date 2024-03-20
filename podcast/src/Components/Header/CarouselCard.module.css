@@ -350,8 +350,59 @@
   }
 
   .genres{
+    padding: 10px;
     font-weight: 800;
   }
+
+
+  .dialogTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    color: #fff;
+    background-color: royalblue;
+  }
+  
+  .dialogContent {
+    padding: 20px;
+    color: #333;
+  }
+  
+  .description {
+    margin-bottom: 20px;
+  }
+  
+  .seasons {
+    font-weight: bold;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .episodeList {
+    margin-top: 20px;
+  }
+  
+  .episodeList ol {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .episodeList li {
+    margin-bottom: 5px;
+  }
+
+  .episodeItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .episodeTitle {
+    margin-left: 10px;
+  }
+  
+  
+
 }
 
   
