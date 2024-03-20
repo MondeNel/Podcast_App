@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './CarouselCard.module.css';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import Dialog from '@mui/material/Dialog';
+import { DialogTitle, DialogContent, Typography, Select, MenuItem } from '@mui/material';
 
 const showsData = [
   {
@@ -96,13 +98,73 @@ const CarouselCard = () => {
     9: "Kids and Family"
 };
 
-
-
+  const [selectedShow, setSelectedShow] = useState(null);
   const [iconColor, setIconColor] = useState('grey');
 
   const handleIconClick = () => {
     setIconColor(iconColor === 'grey' ? 'red' : 'grey');
   };
+
+  const handleViewShow = (show) => {
+    setSelectedShow(show);
+  };
+
+  const handleCloseDialog = () => {
+    setSelectedShow(null);
+  };
+
+  const ShowDialog = ({ showId, onClose }) => {
+    const [show, setShow] = useState(null);
+    const [selectedSeason, setSelectedSeason] = useState(null);
+  
+    useEffect(() => {
+      fetch(`https://podcast-api.netlify.app/id/${showId}`)
+        .then(response => response.json())
+        .then(data => {
+          setShow(data);
+          setSelectedSeason(data.seasons[0]);
+        })
+        .catch(error => console.error('Error fetching show data:', error));
+    }, [showId]);
+  
+    const handleSeasonChange = (event) => {
+      setSelectedSeason(event.target.value);
+    };
+
+    
+    return (
+      <Dialog open={true} onClose={onClose}>
+        {show && (
+          <>
+            <DialogTitle>{show.title}</DialogTitle>
+            <DialogContent>
+              <Typography variant="body1">{show.description}</Typography>
+              <Typography variant="body1">Seasons:</Typography>
+              <Select value={selectedSeason} onChange={handleSeasonChange}>
+                {show.seasons.map((season, index) => (
+                  <MenuItem key={index} value={season}>
+                    Season {index + 1}: {season.episodes.length} episodes
+                  </MenuItem>
+                ))}
+              </Select>
+              {selectedSeason && (
+                <div>
+                  <Typography variant="body1">Episodes:</Typography>
+                  <ul>
+                    {selectedSeason.episodes.map((episode, index) => (
+                      <li key={index}>{episode.title}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </DialogContent>
+          </>
+        )}
+      </Dialog>
+    );
+  };
+  
+
 
   return (
     <>
@@ -117,7 +179,7 @@ const CarouselCard = () => {
               <p>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>
               <p className={styles.genres}>{show.genres.map((genreId) => genreMapping[genreId]).join(", ")}</p>
               <div className={styles.bottom}>
-                <button className={styles.button}>View show</button>
+                <button className={styles.button} onClick={() => handleViewShow(show)}>View show</button>
                 <FavoriteIcon
                   className={styles.icon}
                   style={{ color: iconColor }}
@@ -127,6 +189,9 @@ const CarouselCard = () => {
             </div>
           ))}
         </Slider>
+        {selectedShow && (
+          <ShowDialog showId={selectedShow.id} onClose={handleCloseDialog} />
+        )}
       </div>
     </>
   );
