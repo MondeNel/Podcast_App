@@ -11,12 +11,12 @@
   }
 
   .card {
-    border: 1px solid #ccc;
+
     border-radius: 3px;
     overflow: hidden;
     padding: 5px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  
   }
 
 
@@ -80,12 +80,12 @@
   }
 
   .card {
-    border: 1px solid #ccc;
+
     border-radius: 3px;
     overflow: hidden;
     padding: 5px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+ 
   }
 
   .card h3 {
@@ -148,12 +148,12 @@
   }
 
   .card {
-    border: 1px solid #ccc;
+
     border-radius: 3px;
     overflow: hidden;
     padding: 5px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+   
   }
 
   .card h3 {
@@ -214,12 +214,12 @@
   }
 
   .card {
-    border: 1px solid #ccc;
+
     border-radius: 3px;
     overflow: hidden;
     padding: 5px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+   
   }
 
   .card h3 {
@@ -281,12 +281,12 @@
   }
 
   .card {
-    border: 1px solid #eeeded;
+   
     border-radius: 3px;
     overflow: hidden;
     padding: 5px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  
   }
 
   .card h3 {
