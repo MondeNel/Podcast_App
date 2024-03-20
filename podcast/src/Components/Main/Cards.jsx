@@ -34,17 +34,21 @@ function ShowCard({ show }) {
   );
 }
 
-function ShowList() {
+
+const Cards = () => {
   const [showAll, setShowAll] = useState(false);
   const totalShows = showsData.length;
   const initialLimit = 4;
   const showLimit = showAll ? totalShows : initialLimit;
 
   return (
-    <div className={styles.cardList}>
-      {showsData.slice(0, showLimit).map((show) => (
-        <ShowCard key={show.id} show={show} />
-      ))}
+    <div className={styles.container}>
+      <h1 className={styles.heading_title}>Shows to Listen and Browse...</h1>
+      <div className={styles.cardList}>
+        {showsData.slice(0, showLimit).map((show) => (
+          <ShowCard key={show.id} show={show} />
+        ))}
+      </div>
       {!showAll && (
         <Button onClick={() => setShowAll(true)} className={styles.showMoreButton}>
           Show more
@@ -52,15 +56,7 @@ function ShowList() {
       )}
     </div>
   );
-}
-
-const Cards = () => {
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.heading_title}>Shows to Listen and Browse...</h1>
-      <ShowList />
-    </div>
-  );
 };
+
 
 export default Cards;

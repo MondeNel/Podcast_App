@@ -3,6 +3,12 @@
         padding: 5px;
         transition: transform 0.3s ease;
         box-shadow: 1px solid black;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
 
       .container:hover {
@@ -19,6 +25,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        padding: 20px 10px;
       }
       
       .card {
@@ -66,14 +73,26 @@
         font-size: 16px;
         cursor: pointer;
     }
+
+    .container .showMoreButton {
+      margin-top: auto;
+    }
+
+
  
 }
 
 
 @media only screen and (min-width: 395px) and (max-width: 475px){
    .container {
-        padding: 5px;
+        padding: 15px;
         transition: transform 0.3s ease;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
 
       .container:hover {
@@ -90,6 +109,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
+        padding: 20px 10px;
       }
       
       .card {
@@ -137,6 +157,11 @@
         font-size: 16px;
         cursor: pointer;
     }
+
+    .container .showMoreButton {
+      margin-top: auto;
+    }
+
  
 }
 
@@ -145,6 +170,12 @@
     .container {
         padding: 5px;
         transition: transform 0.3s ease;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
 
       .container:hover {
@@ -161,6 +192,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
+        padding: 20px 10px;
       }
       
       .card {
@@ -208,6 +240,12 @@
         font-size: 24px;
         cursor: pointer;
     }
+
+    .container .showMoreButton {
+      margin-top: auto;
+     
+    }
+
 }
 
 
@@ -215,6 +253,12 @@
     .container {
         padding: 5px;
         transition: transform 0.3s ease;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
 
       .container:hover {
@@ -231,6 +275,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
+        padding: 20px 10px;
       }
       
       .card {
@@ -277,12 +322,24 @@
         font-size: 24px;
         cursor: pointer;
     }
+
+    .container .showMoreButton {
+      margin-top: auto;
+    }
+
 }
 
 @media only screen and (min-width: 979px) and (max-width: 1500px){
     .container {
         padding: 5px;
         transition: transform 0.3s ease;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
 
       /* .container:hover {
@@ -299,6 +356,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
+        padding: 20px 10px;
       }
       
       .card {
@@ -344,5 +402,9 @@
     .icons .favoriteIcon{
         font-size: 30px;
         cursor: pointer;
+    }
+    
+    .container .showMoreButton {
+    margin-top: auto;
     }
 }
