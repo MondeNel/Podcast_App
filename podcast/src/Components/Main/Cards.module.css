@@ -1,7 +1,6 @@
 @media only screen and (max-width: 395px) {
     .container {
         padding: 5px;
-        transition: transform 0.3s ease;
         box-shadow: 1px solid black;
 
         display: flex;
@@ -10,10 +9,6 @@
         justify-content: center;
        
       }
-
-      .container:hover {
-        transform: scale(1.1);
-    }
     
       .heading_title {
         font-size: 16px;
@@ -23,7 +18,7 @@
       
       .cardList {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 20px 10px;
       }
@@ -86,7 +81,7 @@
 @media only screen and (min-width: 395px) and (max-width: 475px){
    .container {
         padding: 15px;
-        transition: transform 0.3s ease;
+     
 
         display: flex;
         flex-direction: column;
@@ -94,10 +89,6 @@
         justify-content: center;
   
       }
-
-      .container:hover {
-        transform: scale(1.1);
-    } 
     
       .heading_title {
         font-size: 16px;
@@ -107,7 +98,7 @@
       
       .cardList {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         padding: 20px 10px;
       }
@@ -169,7 +160,7 @@
 @media only screen and (min-width: 476px) and (max-width: 750px){
     .container {
         padding: 5px;
-        transition: transform 0.3s ease;
+      
 
         display: flex;
         flex-direction: column;
@@ -178,9 +169,6 @@
 
       }
 
-      .container:hover {
-        transform: scale(1.1);
-    } 
     
       .heading_title {
         font-size: 20px;
@@ -190,7 +178,7 @@
       
       .cardList {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         padding: 20px 10px;
       }
@@ -252,7 +240,7 @@
 @media only screen and (min-width: 751px) and (max-width: 979px){
     .container {
         padding: 5px;
-        transition: transform 0.3s ease;
+       
 
         display: flex;
         flex-direction: column;
@@ -261,9 +249,7 @@
 
       }
 
-      .container:hover {
-        transform: scale(1.1);
-    } 
+   
     
       .heading_title {
         font-size: 20px;
@@ -332,8 +318,6 @@
 @media only screen and (min-width: 979px) and (max-width: 1500px){
     .container {
         padding: 5px;
-        transition: transform 0.3s ease;
-
 
         display: flex;
         flex-direction: column;
@@ -341,9 +325,7 @@
         justify-content: center;
       }
 
-      /* .container:hover {
-        transform: scale(1.1);
-    }  */
+
     
       .heading_title {
         font-size: 18px;

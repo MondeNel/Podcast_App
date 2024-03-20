@@ -1,7 +1,8 @@
 @media only screen and (max-width: 395px) {
   .carousel_container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    padding:  10px 20px;
   }
 
   .heading {
@@ -68,8 +69,9 @@
 
 @media only screen and (min-width: 395px) and (max-width: 475px){
   .carousel_container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    padding:  10px 20px;
   }
 
   .heading {
@@ -135,8 +137,9 @@
 
 @media only screen and (min-width: 476px) and (max-width: 750px){
   .carousel_container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    padding:  10px 20px;
   }
 
   .heading {
@@ -201,8 +204,9 @@
 
 @media only screen and (min-width: 751px) and (max-width: 979px){
   .carousel_container {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
+    padding:  10px 20px;
   }
 
   .heading {
@@ -266,8 +270,9 @@
 
 @media only screen and (min-width: 979px) and (max-width: 1500px){
   .carousel_container {
-    width: 90%;
+    width: 100%;
     margin: 5px auto;
+    padding:  10px 20px;
   }
 
   .heading {
