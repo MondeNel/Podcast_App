@@ -13,6 +13,19 @@ function ShowCard({ show }) {
     setIconColor(iconColor === 'grey' ? 'red' : 'grey');
   };
 
+  
+  const genreMapping = {
+    1: "Personal Growth",
+    2: "True Crime and Investigative Journalism",
+    3: "History",
+    4: "Comedy",
+    5: "Entertainment",
+    6: "Business",
+    7: "Fiction",
+    8: "News",
+    9: "Kids and Family"
+};
+
   return (
     <div className={styles.card}>
       <img src={show.image} alt={show.title} />
@@ -21,6 +34,7 @@ function ShowCard({ show }) {
         <p className={styles.seasons}>Seasons: {show.seasons}</p>
         <p className={styles.episodes}>Episodes: {show.episodes}</p>
         <p className={styles.date}>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>
+        <p className={styles.genres}>{show.genres.map((genreId) => genreMapping[genreId]).join(", ")}</p>
         <div className={styles.icons}>
           <PlayCircleOutlineIcon className={styles.playButton} />
           <FavoriteIcon

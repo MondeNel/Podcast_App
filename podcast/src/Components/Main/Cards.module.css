@@ -73,8 +73,10 @@
       margin-top: auto;
     }
 
+    .genres{
+      font-weight: 800;
+    }
 
- 
 }
 
 
@@ -153,7 +155,9 @@
       margin-top: auto;
     }
 
- 
+    .genres{
+      font-weight: 800;
+    }
 }
 
 
@@ -231,7 +235,10 @@
 
     .container .showMoreButton {
       margin-top: auto;
-     
+    }
+
+    .genres{
+      font-weight: 800;
     }
 
 }
@@ -313,6 +320,10 @@
       margin-top: auto;
     }
 
+    .genres{
+      font-weight: 800;
+    }
+
 }
 
 @media only screen and (min-width: 979px) and (max-width: 1500px){
@@ -387,5 +398,9 @@
     
     .container .showMoreButton {
     margin-top: auto;
+    }
+
+    .genres{
+      font-weight: 800;
     }
 }
