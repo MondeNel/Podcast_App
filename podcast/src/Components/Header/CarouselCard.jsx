@@ -137,11 +137,11 @@ const CarouselCard = () => {
       <Dialog open={true} onClose={onClose}>
         {show && (
           <>
-            <DialogTitle className={styles.dialogTitle}>{show.title}</DialogTitle>
+            <div className={styles.dialogTitle}>{show.title}</div>
             <DialogContent className={styles.dialogContent}>
-              <Typography className={styles.description}>{show.description}</Typography>
-              <Typography className={styles.seasons}>Seasons:</Typography>
-              <Select value={selectedSeason} onChange={handleSeasonChange}>
+              <div className={styles.description}>{show.description}</div>
+              <div className={styles.seasons_title}>Seasons:</div>
+              <Select value={selectedSeason} onChange={handleSeasonChange} className={styles.customSelect}>
                 {show.seasons.map((season, index) => (
                   <MenuItem key={index} value={season}>
                     Season {index + 1}: {season.episodes.length} episodes
