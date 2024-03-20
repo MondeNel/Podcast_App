@@ -34,11 +34,39 @@ function ShowCard({ show }) {
   );
 }
 
+function ShowList() {
+  const [showAll, setShowAll] = useState(false);
+  const totalShows = showsData.length;
+  const initialLimit = 4;
+  const remainingShows = totalShows - initialLimit;
+  const showLimit = showAll ? totalShows : initialLimit;
+
+  return (
+    <div className={styles.cardList}>
+      {showsData.slice(0, showLimit).map((show) => (
+        <ShowCard key={show.id} show={show} />
+      ))}
+      {!showAll && (
+        <Button onClick={() => setShowAll(true)} className={styles.showMoreButton}>
+          Show more ({remainingShows} remaining)
+        </Button>
+      )}
+      {showAll && (
+        showsData.slice(initialLimit).map((show) => (
+          <ShowCard key={show.id} show={show} />
+        ))
+      )}
+    </div>
+  );
+}
+
+
 
 const Cards = () => {
   const [showAll, setShowAll] = useState(false);
   const totalShows = showsData.length;
   const initialLimit = 4;
+  const remainingShows = totalShows - initialLimit;
   const showLimit = showAll ? totalShows : initialLimit;
 
   return (
@@ -51,12 +79,13 @@ const Cards = () => {
       </div>
       {!showAll && (
         <Button onClick={() => setShowAll(true)} className={styles.showMoreButton}>
-          Show more
+          Show more ({remainingShows} remaining)
         </Button>
       )}
     </div>
   );
 };
+
 
 
 export default Cards;
