@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import styles from './Search.module.css'; // Import the CSS module
+import React, { useState, useEffect, useRef } from 'react';
+import styles from './Search.module.css';
 import Fuse from 'fuse.js';
 
 const API_URL = 'https://podcast-api.netlify.app/shows';
@@ -8,8 +8,8 @@ const Search = () => {
     const [input, setInput] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [showResults, setShowResults] = useState(false);
-    const [selectedShow, setSelectedShow] = useState(null);
     const [fuse, setFuse] = useState(null);
+    const searchRef = useRef(null);
 
     useEffect(() => {
         const fetchAndSetFuseData = async () => {
@@ -25,68 +25,55 @@ const Search = () => {
     }, []);
 
     useEffect(() => {
-        const handleDocumentClick = (event) => {
-            if (!document.querySelector(`.${styles.input__wrapper}`).contains(event.target)) {
+        const handleClickOutside = (event) => {
+            if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setShowResults(false);
             }
         };
 
-        document.addEventListener('click', handleDocumentClick);
-        return () => {
-            document.removeEventListener('click', handleDocumentClick);
-        };
-    }, [styles.input__wrapper]);
+        document.addEventListener('click', handleClickOutside);
 
-    const openResultsDialog = (show) => {
-        setSelectedShow(show);
-        setShowResults(false);
-    };
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     const fetchData = (value) => {
+        if (!fuse) return;
         const result = fuse.search(value);
         const filteredShows = result.map((show) => show.item);
         setFilteredData(filteredShows);
-        setShowResults(true);
+        setShowResults(true); // Show results when data is fetched
     };
-
-    let searchTimeout;
 
     const handleChange = (value) => {
         setInput(value);
 
-        clearTimeout(searchTimeout);
-
-        searchTimeout = setTimeout(() => {
-            if (value.trim() !== '') {
-                fetchData(value);
-            } else {
-                setFilteredData([]);
-                setShowResults(false);
-            }
-        }, 100);
+        if (value.trim() !== '') {
+            fetchData(value);
+        } else {
+            setFilteredData([]);
+            setShowResults(false); // Hide results when input is empty
+        }
     };
 
     return (
-        <div className={styles.input__wrapper}> {/* Use the CSS class from the module */}
+        <div className={styles.input__wrapper} ref={searchRef}>
             <input
                 type="text"
-                className={styles.input} 
+                className={styles.input}
                 placeholder="Type to search..."
                 value={input}
                 onChange={(e) => handleChange(e.target.value)}
             />
-            <div className={`${styles.result__box} ${showResults ? styles.show : ''}`}> {/* Use the CSS classes from the module */}
-                <ul className={styles.result__list}> {/* Use the CSS class from the module */}
+            {showResults && (
+                <div className={styles.result__box}>
                     {filteredData.map((show) => (
-                        <li key={show.id} className={styles.result} onClick={() => openResultsDialog(show)}>
+                        <div key={show.id} className={styles.dropdown__item} onClick={() => setInput(show.title)}>
                             {show.title}
-                        </li>
+                        </div>
                     ))}
-                </ul>
-            </div>
-
-            {selectedShow && (
-                <SearchResultsDialog show={selectedShow} onClose={() => setSelectedShow(null)} />
+                </div>
             )}
         </div>
     );
