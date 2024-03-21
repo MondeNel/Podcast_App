@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Search.module.css';
 import Fuse from 'fuse.js';
+import Dialog from '@mui/material/Dialog';
+import { DialogContent, Select, MenuItem } from '@mui/material';
+import { PlayCircleOutline } from '@mui/icons-material';
 
 const API_URL = 'https://podcast-api.netlify.app/shows';
 
@@ -8,6 +11,7 @@ const Search = () => {
     const [input, setInput] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [showResults, setShowResults] = useState(false);
+    const [selectedShow, setSelectedShow] = useState(null);
     const [fuse, setFuse] = useState(null);
     const searchRef = useRef(null);
 
@@ -57,6 +61,56 @@ const Search = () => {
         }
     };
 
+    const handleShowClick = (show) => {
+        setSelectedShow(show);
+        setShowResults(false);
+    };
+
+    const handleCloseDialog = () => {
+        setSelectedShow(null);
+    };
+
+    const ShowDialog = ({ show }) => {
+        const [selectedSeason, setSelectedSeason] = useState(null);
+    
+        const handleSeasonChange = (event) => {
+            setSelectedSeason(event.target.value);
+        };
+    
+        return (
+            <Dialog open={true} onClose={handleCloseDialog}>
+                <>
+                    <div className={styles.dialogTitle}>{show.title}</div>
+                    <DialogContent className={styles.dialogContent}>
+                        <div className={styles.description}>{show.description}</div>
+                        <div className={styles.seasons_title}>Seasons:</div>
+                        <Select value={selectedSeason} onChange={handleSeasonChange} className={styles.customSelect}>
+                            {Array.isArray(show.seasons) &&
+                                show.seasons.map((season, index) => (
+                                    <MenuItem key={index} value={season}>
+                                        Season {index + 1}: {season.episodes.length} episodes
+                                    </MenuItem>
+                                ))}
+                        </Select>
+                        {selectedSeason && (
+                            <div className={styles.episodeList}>
+                                <ol>
+                                    {selectedSeason.episodes.map((episode, index) => (
+                                        <li key={index} className={styles.episodeItem}>
+                                            <PlayCircleOutline style={{ color: 'red' }} />
+                                            <span className={styles.episodeTitle}>{episode.title}</span>
+                                        </li>
+                                    ))}
+                                </ol>
+                            </div>
+                        )}
+                    </DialogContent>
+                </>
+            </Dialog>
+        );
+    };
+    
+
     return (
         <div className={styles.input__wrapper} ref={searchRef}>
             <input
@@ -69,12 +123,13 @@ const Search = () => {
             {showResults && (
                 <div className={styles.result__box}>
                     {filteredData.map((show) => (
-                        <div key={show.id} className={styles.dropdown__item} onClick={() => setInput(show.title)}>
+                        <div key={show.id} className={styles.dropdown__item} onClick={() => handleShowClick(show)}>
                             {show.title}
                         </div>
                     ))}
                 </div>
             )}
+            {selectedShow && <ShowDialog show={selectedShow} />}
         </div>
     );
 };
