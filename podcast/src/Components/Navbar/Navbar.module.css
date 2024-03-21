@@ -1,27 +1,25 @@
 /* Navbar.module.css */
 
 .topnav {
-  background-color: #333;
+  background-color: royalblue; /* Change navbar color to royal blue */
   overflow: hidden;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px; /* Make the text smaller */
+  display: flex;
+  align-items: center; /* Align text vertically center with icons */
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+.topnav a svg {
+  width: 20px; /* Make the icons smaller */
+  height: 20px; /* Make the icons smaller */
+  margin-right: 8px; /* Add space between icon and text */
 }
 
 .search-container {
