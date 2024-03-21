@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import SearchIcon from '@mui/icons-material/Search';
 import styles from './Search.module.css'; // Import the CSS module
 import Fuse from 'fuse.js';
 
@@ -10,7 +9,7 @@ const Search = () => {
     const [filteredData, setFilteredData] = useState([]);
     const [showResults, setShowResults] = useState(false);
     const [selectedShow, setSelectedShow] = useState(null);
-    const [fuse, setFuse] = useState(new Fuse([], { keys: ['title'], includeScore: true }));
+    const [fuse, setFuse] = useState(null);
 
     useEffect(() => {
         const fetchAndSetFuseData = async () => {
@@ -27,7 +26,7 @@ const Search = () => {
 
     useEffect(() => {
         const handleDocumentClick = (event) => {
-            if (!document.querySelector('.input__wrapper').contains(event.target)) {
+            if (!document.querySelector(`.${styles.input__wrapper}`).contains(event.target)) {
                 setShowResults(false);
             }
         };
@@ -36,7 +35,7 @@ const Search = () => {
         return () => {
             document.removeEventListener('click', handleDocumentClick);
         };
-    }, []);
+    }, [styles.input__wrapper]);
 
     const openResultsDialog = (show) => {
         setSelectedShow(show);
@@ -69,7 +68,6 @@ const Search = () => {
 
     return (
         <div className={styles.input__wrapper}> {/* Use the CSS class from the module */}
-            <SearchIcon className={styles.search__icon} /> {/* Use the CSS class from the module */}
             <input
                 type="text"
                 className={styles.input} 

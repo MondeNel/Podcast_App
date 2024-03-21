@@ -1,29 +1,13 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import styles from './Navbar.module.css';
-import Search from './Search'; 
-import logo from '../../assets/faviconio-logo/logoNote.jpg'
+import styles from './Navbar.module.css'; // Import the CSS module
+import Search from './Search';
 
 const Navbar = () => {
   return (
-    <AppBar position="static" className={styles.navbar}>
-      <Toolbar className={styles.toolbar}>
-        <img src={logo} alt="Logo" className={styles.logo} />
-        <div className={styles.text}>Podcast</div>
-        <Search /> 
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          className={styles.menuButton}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
-    </AppBar>
+    <div className={styles.topnav}> {/* Use the CSS class from the module */}
+      <a className={styles.active} href="#home">Podcast 3000</a> {/* Use the CSS class from the module */}
+      <Search />
+    </div>
   );
 };
 

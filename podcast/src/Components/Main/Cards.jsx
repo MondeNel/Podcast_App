@@ -90,7 +90,7 @@ const Cards = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading_title}>Shows to Listen and Browse...</h1>
+      <h1 className={styles.heading_title}>Shows to Watch and Browse...</h1>
       <div className={styles.cardList}>
         {showsData.slice(0, showLimit).map((show) => (
           <ShowCard key={show.id} show={show} />

@@ -1,13 +1,23 @@
-.input__wrapper {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .input {
-    width: 200px; /* Adjust as needed */
+@media only screen and (max-width: 395px){
+  .input__wrapper {
+    display: flex;
+    align-items: center;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  
+  .search__icon {
+    margin-right: 8px;
+    color: #333;
+  }
+  
+  .input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 6px; /* Adjust padding to make the input field smaller */
+    font-size: 14px; /* Adjust font size */
   }
   
   .result__box {
@@ -15,12 +25,11 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
+    max-height: 200px;
+    overflow-y: auto;
     border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    border-radius: 4px;
+    background-color: #fff;
     display: none;
   }
   
@@ -37,10 +46,11 @@
   .result {
     padding: 8px;
     cursor: pointer;
-    color: #333; /* Text color for the search results */
   }
   
   .result:hover {
     background-color: #f9f9f9;
   }
   
+}
+
