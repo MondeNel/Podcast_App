@@ -82,6 +82,7 @@ const Search = () => {
                 <>
                     <div className={styles.dialogTitle}>{show.title}</div>
                     <DialogContent className={styles.dialogContent}>
+                        <img src={show.image} alt={show.title} className={styles.showImage} />
                         <div className={styles.description}>{show.description}</div>
                         <div className={styles.seasons_title}>Seasons:</div>
                         <Select value={selectedSeason} onChange={handleSeasonChange} className={styles.customSelect}>
@@ -109,6 +110,8 @@ const Search = () => {
             </Dialog>
         );
     };
+    
+    
     
 
     return (
