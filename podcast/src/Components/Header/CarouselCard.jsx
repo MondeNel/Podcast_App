@@ -139,6 +139,7 @@ const CarouselCard = () => {
         {show && (
           <>
             <div className={styles.dialogTitle}>{show.title}</div>
+            <img src={show.image} alt={show.title} className={styles.showImage} />
             <DialogContent className={styles.dialogContent}>
               <div className={styles.description}>{show.description}</div>
               <div className={styles.seasons_title}>Seasons:</div>
