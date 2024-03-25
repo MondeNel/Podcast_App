@@ -52,12 +52,6 @@ function ShowCard({ show, onShowDetails }) {
           })}
         </p>
         <div className={styles.icons}>
-          <PlayCircleOutlineIcon className={styles.playButton} />
-          <FavoriteIcon
-            className={styles.favoriteIcon}
-            style={{ color: iconColor }}
-            onClick={handleIconClick}
-          />
           <Button onClick={handleShowDetails}>Show Details</Button>
         </div>
         {openDialog && (
