@@ -63,56 +63,65 @@ const Search = () => {
 
     const handleShowClick = (show) => {
         setSelectedShow(show);
-        setShowResults(false);
+        setShowResults(false); // Hide results when show is clicked
     };
 
     const handleCloseDialog = () => {
         setSelectedShow(null);
     };
 
-    const ShowDialog = ({ show }) => {
+    const ShowDialog = ({ showId, onClose }) => {
+        const [show, setShow] = useState(null);
         const [selectedSeason, setSelectedSeason] = useState(null);
-    
+
+        useEffect(() => {
+            fetch(`https://podcast-api.netlify.app/id/${showId}`)
+                .then(response => response.json())
+                .then(data => {
+                    setShow(data);
+                    setSelectedSeason(data.seasons[0]);
+                })
+                .catch(error => console.error('Error fetching show data:', error));
+        }, [showId]);
+
         const handleSeasonChange = (event) => {
             setSelectedSeason(event.target.value);
         };
-    
+
         return (
-            <Dialog open={true} onClose={handleCloseDialog}>
-                <>
-                    <div className={styles.dialogTitle}>{show.title}</div>
-                    <DialogContent className={styles.dialogContent}>
+            <Dialog open={true} onClose={onClose}>
+                {show && (
+                    <>
+                        <div className={styles.dialogTitle}>{show.title}</div>
                         <img src={show.image} alt={show.title} className={styles.showImage} />
-                        <div className={styles.description}>{show.description}</div>
-                        <div className={styles.seasons_title}>Seasons:</div>
-                        <Select value={selectedSeason} onChange={handleSeasonChange} className={styles.customSelect}>
-                            {Array.isArray(show.seasons) &&
-                                show.seasons.map((season, index) => (
+                        <DialogContent className={styles.dialogContent}>
+                            <div className={styles.description}>{show.description}</div>
+                            <div className={styles.seasons_title}>Seasons:</div>
+                            <Select value={selectedSeason} onChange={handleSeasonChange} className={styles.customSelect}>
+                                {show.seasons.map((season, index) => (
                                     <MenuItem key={index} value={season}>
                                         Season {index + 1}: {season.episodes.length} episodes
                                     </MenuItem>
                                 ))}
-                        </Select>
-                        {selectedSeason && (
-                            <div className={styles.episodeList}>
-                                <ol>
-                                    {selectedSeason.episodes.map((episode, index) => (
-                                        <li key={index} className={styles.episodeItem}>
-                                            <PlayCircleOutline style={{ color: 'red' }} />
-                                            <span className={styles.episodeTitle}>{episode.title}</span>
-                                        </li>
-                                    ))}
-                                </ol>
-                            </div>
-                        )}
-                    </DialogContent>
-                </>
+                            </Select>
+                            {selectedSeason && (
+                                <div className={styles.episodeList}>
+                                    <ol>
+                                        {selectedSeason.episodes.map((episode, index) => (
+                                            <li key={index} className={styles.episodeItem}>
+                                                <PlayCircleOutline style={{ color: 'red' }} />
+                                                <span className={styles.episodeTitle}>{episode.title}</span>
+                                            </li>
+                                        ))}
+                                    </ol>
+                                </div>
+                            )}
+                        </DialogContent>
+                    </>
+                )}
             </Dialog>
         );
     };
-    
-    
-    
 
     return (
         <div className={styles.input__wrapper} ref={searchRef}>
@@ -132,7 +141,9 @@ const Search = () => {
                     ))}
                 </div>
             )}
-            {selectedShow && <ShowDialog show={selectedShow} />}
+            {selectedShow && (
+                <ShowDialog showId={selectedShow.id} onClose={handleCloseDialog} />
+            )}
         </div>
     );
 };

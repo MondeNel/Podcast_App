@@ -177,7 +177,6 @@ const CarouselCard = () => {
         <Slider {...settings}>
           {showsData.map((show) => (
             <div className={styles.card} key={show.id}>
-              {/* include the show image as well */}
               <h3>{show.title}</h3>
               <img src={show.image} alt={show.title} className={styles.card_image} />
               <p>Seasons: {show.seasons}</p>
