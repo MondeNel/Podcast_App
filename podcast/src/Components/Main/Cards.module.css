@@ -58,14 +58,14 @@
       }
 
     .icons .playButton {
-        font-size: 16px;
+        font-size: 20px;
         color: red;
         border: none;
         cursor: pointer;
     }
 
     .icons .favoriteIcon{
-        font-size: 16px;
+        font-size: 20px;
         cursor: pointer;
     }
 
@@ -141,14 +141,14 @@
       }
 
     .icons .playButton {
-        font-size: 16px;
+        font-size: 22px;
         color: red;
         border: none;
         cursor: pointer;
     }
 
     .icons .favoriteIcon{
-        font-size: 16px;
+        font-size: 22px;
         cursor: pointer;
     }
 
