@@ -500,7 +500,6 @@
   }
 
   .card {
-   
     border-radius: 3px;
     overflow: hidden;
     padding: 5px;
@@ -607,7 +606,17 @@
     margin-left: 10px;
     font-size: 18px;
   }
-  
+
+
+  .showImage{
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 }
 
