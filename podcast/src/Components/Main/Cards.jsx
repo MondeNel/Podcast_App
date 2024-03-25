@@ -74,15 +74,16 @@ function ShowDialog({ showId, onClose }) {
   const [selectedEpisode, setSelectedEpisode] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioUrl, setAudioUrl] = useState('');
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     fetch(`https://podcast-api.netlify.app/id/${showId}`)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setShow(data);
         setSelectedSeason(data.seasons[0]);
       })
-      .catch(error => console.error('Error fetching show data:', error));
+      .catch((error) => console.error('Error fetching show data:', error));
   }, [showId]);
 
   const handleSeasonChange = (event) => {
@@ -95,6 +96,17 @@ function ShowDialog({ showId, onClose }) {
     setSelectedEpisode(episode);
     setIsPlaying(true);
     setAudioUrl(episode.audioUrl);
+  };
+
+  const toggleFavorite = (episode) => {
+    const index = favorites.findIndex((fav) => fav.id === episode.id);
+    if (index === -1) {
+      setFavorites([...favorites, episode]);
+    } else {
+      const updatedFavorites = [...favorites];
+      updatedFavorites.splice(index, 1);
+      setFavorites(updatedFavorites);
+    }
   };
 
   return (
@@ -121,6 +133,11 @@ function ShowDialog({ showId, onClose }) {
                       <Button onClick={() => handleEpisodePlay(episode)}>
                         {episode.title}
                       </Button>
+                      <FavoriteIcon
+                        className={styles.favoriteIcon}
+                        style={{ color: favorites.some((fav) => fav.id === episode.id) ? 'red' : 'grey' }}
+                        onClick={() => toggleFavorite(episode)}
+                      />
                     </li>
                   ))}
                 </ol>
