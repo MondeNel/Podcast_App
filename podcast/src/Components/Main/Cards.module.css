@@ -74,10 +74,85 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
-    .genres{
+
+     /* Dialog */
+    
+     .dialogContent .customSelect{
+      font-size: 12px;
+     }
+  
+     .genres{
       font-size: 8px;
       font-weight: 800;
     }
+  
+    .dialogTitle {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px;
+      color: #fff;
+      background-color: royalblue;
+    }
+    
+    .dialogContent {
+      color: #333;
+    }
+    
+    .description {
+      margin-bottom: 18px;
+      font-size: 10px;
+    }
+    
+    
+    .seasons_title {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .episodeList {
+      margin-top: 20px;
+    }
+    
+    .episodeList ol {
+      list-style-type: none;
+      padding-left: 10px;
+    }
+    
+    .episodeList li {
+      margin-bottom: 5px;
+      cursor: pointer;
+      font-size: 10px;
+      padding: 10px;
+    }
+  
+    .episodeItem {
+      border:lightgray;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+  
+    .showImage{
+      width: 50%;
+      height: auto;
+      padding: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .episodeList .favoriteIcon{
+    margin-left: auto;
+    font-size: 14px;
+  }
+
+  .episodeItem .title{
+    font-size: 8px;
+  }
 
 }
 
@@ -159,9 +234,83 @@
     }
 
     
-    .genres{
+      /* Dialog */
+    
+      .dialogContent .customSelect{
+        font-size: 12px;
+       }
+    
+       .genres{
+        font-size: 8px;
+        font-weight: 800;
+      }
+    
+      .dialogTitle {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+        color: #fff;
+        background-color: royalblue;
+      }
+      
+      .dialogContent {
+        color: #333;
+      }
+      
+      .description {
+        margin-bottom: 18px;
+        font-size: 10px;
+      }
+      
+      
+      .seasons_title {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .episodeList {
+        margin-top: 20px;
+      }
+      
+      .episodeList ol {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+      
+      .episodeList li {
+        margin-bottom: 5px;
+        cursor: pointer;
+        font-size: 10px;
+        padding: 10px;
+      }
+    
+      .episodeItem {
+        border:lightgray;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        width: 100%;
+      }
+    
+      .showImage{
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+    .episodeList .favoriteIcon{
+      margin-left: auto;
+      font-size: 14px;
+    }
+  
+    .episodeItem .title{
       font-size: 8px;
-      font-weight: 800;
     }
 }
 
@@ -242,9 +391,83 @@
     }
 
     
-    .genres{
-      font-size: 16px;
-      font-weight: 800;
+      /* Dialog */
+    
+      .dialogContent .customSelect{
+        font-size: 12px;
+       }
+    
+       .genres{
+        font-size: 16px;
+        font-weight: 800;
+      }
+    
+      .dialogTitle {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px;
+        color: #fff;
+        background-color: royalblue;
+      }
+      
+      .dialogContent {
+        color: #333;
+      }
+      
+      .description {
+        margin-bottom: 20px;
+        font-size: 10px;
+      }
+      
+      
+      .seasons_title {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .episodeList {
+        margin-top: 20px;
+      }
+      
+      .episodeList ol {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+      
+      .episodeList li {
+        margin-bottom: 5px;
+        cursor: pointer;
+        font-size: 10px;
+        padding: 10px;
+      }
+    
+      .episodeItem {
+        border:lightgray;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        width: 100%;
+      }
+    
+      .showImage{
+        width: 50%;
+        height: auto;
+        padding: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+    .episodeList .favoriteIcon{
+      margin-left: auto;
+      font-size: 14px;
+    }
+  
+    .episodeItem .title{
+      font-size: 8px;
     }
 
 }
@@ -323,10 +546,84 @@
     }
 
    
-    .genres{
+    /* Dialog */
+    
+    .dialogContent .customSelect{
+      font-size: 12px;
+     }
+  
+     .genres{
       font-size: 16px;
       font-weight: 800;
     }
+  
+    .dialogTitle {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 5px;
+      color: #fff;
+      background-color: royalblue;
+    }
+    
+    .dialogContent {
+      color: #333;
+    }
+    
+    .description {
+      margin-bottom: 20px;
+      font-size: 10px;
+    }
+    
+    
+    .seasons_title {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .episodeList {
+      margin-top: 20px;
+    }
+    
+    .episodeList ol {
+      list-style-type: none;
+      padding-left: 10px;
+    }
+    
+    .episodeList li {
+      margin-bottom: 5px;
+      cursor: pointer;
+      font-size: 10px;
+      padding: 10px;
+    }
+  
+    .episodeItem {
+      border:lightgray;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+  
+    .showImage{
+      width: 50%;
+      height: auto;
+      padding: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .episodeList .favoriteIcon{
+    margin-left: auto;
+    font-size: 14px;
+  }
+
+  .episodeItem .title{
+    font-size: 8px;
+  }
 
 }
 
@@ -402,22 +699,20 @@
       }
       
 
-    .genres{
+    /* Dialog */
+    
+    .dialogContent .customSelect{
+      font-size: 14px;
+      width: 100%;
+     }
+  
+     .genres{
       font-size: 16px;
       font-weight: 800;
     }
-
-
-    /* Dialog */
-    
-    .genres{
-      padding: 10px;
-      font-weight: 800;
-    }
-  
   
     .dialogTitle {
-      font-size: 18px;
+      font-size: 14px;
       font-weight: bold;
       padding: 10px;
       color: #fff;
@@ -429,15 +724,15 @@
     }
     
     .description {
-      margin-bottom: 18px;
-      font-size: 16px;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
     
     
     .seasons_title {
-      font-size: 18px;
+      font-size: 14px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     
     .episodeList {
@@ -452,6 +747,8 @@
     .episodeList li {
       margin-bottom: 5px;
       cursor: pointer;
+      font-size: 14px;
+      padding: 15px;
     }
   
     .episodeItem {
@@ -459,8 +756,9 @@
       border-radius: 3px;
       display: flex;
       align-items: center;
-      padding: 8px;
+      padding: 4px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      width: 100%;
     }
   
     .showImage{
@@ -472,12 +770,13 @@
       margin-right: auto;
   }
 
-  .favoriteIcon{
+  .episodeList .favoriteIcon{
     margin-left: auto;
+    font-size: 20px;
   }
 
   .episodeItem .title{
-    font-size: 10px;
+    font-size: 16px;
   }
   
   

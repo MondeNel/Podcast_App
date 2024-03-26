@@ -100,13 +100,19 @@ function ShowDialog({ showId, onClose }) {
           <DialogContent className={styles.dialogContent}>
             <div className={styles.description}>{show.description}</div>
             <div className={styles.seasons_title}>Seasons:</div>
-            <Select value={selectedSeason} onChange={handleSeasonChange} className={styles.customSelect}>
+            <Select
+              value={selectedSeason}
+              onChange={handleSeasonChange}
+              className={styles.customSelect}
+              style={{ width: '100%', height: '30px' }}
+            >
               {show.seasons.map((season, index) => (
                 <MenuItem key={index} value={season}>
                   Season {index + 1}: {season.episodes.length} episodes
                 </MenuItem>
               ))}
             </Select>
+
             {selectedSeason && (
               <div className={styles.episodeList}>
                 <ol>
