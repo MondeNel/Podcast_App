@@ -1,22 +1,14 @@
 import React from 'react';
 import styles from './Navbar.module.css'; 
 import Search from './Search';
-import { Home, ContactMail, Info } from '@mui/icons-material';
+import logoNote from '../../assets/faviconio-logo/logoNote.jpg'
 
 const Navbar = () => {
   return (
     <div className={styles.topnav}> 
       <a className={styles.active} href="#home">
-        <Home /> {/* Home icon */}
-        Home
-      </a>
-      <a href="#contact">
-        <ContactMail /> {/* Contact icon */}
-        Contact
-      </a>
-      <a href="#about">
-        <Info /> {/* About icon */}
-        About
+        <img src={logoNote} alt="Logo" className={styles.logo} /> 
+        <h2 className={styles.title}>Podcast3000</h2>
       </a>
       <Search />
     </div>

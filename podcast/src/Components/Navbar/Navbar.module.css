@@ -1,37 +1,50 @@
 
-.topnav {
-  background-color: royalblue; /* Change navbar color to royal blue */
-  overflow: hidden;
-}
-
-.topnav a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 14px; /* Make the text smaller */
-  display: flex;
-  align-items: center; /* Align text vertically center with icons */
-}
-
-.topnav a svg {
-  width: 20px; /* Make the icons smaller */
-  height: 20px; /* Make the icons smaller */
-  margin-right: 8px; /* Add space between icon and text */
-}
-
 @media only screen and (max-width: 395px) {
-  .topnav a[href="#contact"],
-  .topnav a[href="#about"] {
-    display: none; /* Hide Contact and About links for small screens */
-  }
+  
 }
 
 
 @media only screen and (min-width: 395px) and (max-width: 475px){
-  .topnav a[href="#contact"],
-  .topnav a[href="#about"] {
-    display: none; /* Hide Contact and About links for small screens */
+ 
+  
+}
+
+
+@media only screen and (min-width: 476px) and (max-width: 750px){
+
+}
+
+
+@media only screen and (min-width: 751px) and (max-width: 979px){
+
+}
+
+@media only screen and (min-width: 979px) and (max-width: 1500px){
+
+
+  .topnav {
+    background-color: royalblue; 
+    overflow: hidden;
+  }
+
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px; 
+    display: flex;
+    align-items: center; 
+  }
+
+  .title {
+    margin-left: 8px;
+  }
+
+  .logo{
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
   }
 }
