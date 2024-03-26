@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import { DialogContent, Select, MenuItem } from '@mui/material';
@@ -65,9 +64,6 @@ function ShowCard({ show, onShowDetails }) {
 function ShowDialog({ showId, onClose }) {
   const [show, setShow] = useState(null);
   const [selectedSeason, setSelectedSeason] = useState(null);
-  const [selectedEpisode, setSelectedEpisode] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [audioUrl, setAudioUrl] = useState('');
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
@@ -82,14 +78,6 @@ function ShowDialog({ showId, onClose }) {
 
   const handleSeasonChange = (event) => {
     setSelectedSeason(event.target.value);
-    setSelectedEpisode(null);
-    setIsPlaying(false);
-  };
-
-  const handleEpisodePlay = (episode) => {
-    setSelectedEpisode(episode);
-    setIsPlaying(true);
-    setAudioUrl(episode.audioUrl);
   };
 
   const toggleFavorite = (episode) => {
@@ -124,9 +112,7 @@ function ShowDialog({ showId, onClose }) {
                 <ol>
                   {selectedSeason.episodes.map((episode, index) => (
                     <li key={index} className={styles.episodeItem}>
-                      <Button onClick={() => handleEpisodePlay(episode)}>
-                        {episode.title}
-                      </Button>
+                      {episode.title}
                       <FavoriteIcon
                         className={styles.favoriteIcon}
                         style={{ color: favorites.some((fav) => fav.id === episode.id) ? 'red' : 'grey' }}
@@ -137,20 +123,13 @@ function ShowDialog({ showId, onClose }) {
                 </ol>
               </div>
             )}
-            {selectedEpisode && (
-              <div className={styles.audioPlayer}>
-                <audio controls autoPlay={isPlaying}>
-                  <source src={audioUrl} type="audio/mp3" />
-                  Your browser does not support the audio element.
-                </audio>
-              </div>
-            )}
           </DialogContent>
         </>
       )}
     </Dialog>
   );
 }
+
 
 
 
