@@ -50,27 +50,28 @@
         font-size: 8px;
     }
 
-    .icons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 5px;
-      }
-
-    .icons .playButton {
-        font-size: 20px;
-        color: red;
-        border: none;
-        cursor: pointer;
+    /* show details button */
+    .icons{
+      width: 100%;
+      height: 30px;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .icons .favoriteIcon{
-        font-size: 20px;
-        cursor: pointer;
+    .icons Button{
+      font-size: 8px;
     }
 
-    .container .showMoreButton {
-      margin-top: auto;
+    /* show more button */
+    .showMoreContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
 
     .genres{
@@ -133,29 +134,31 @@
         font-size: 8px;
     }
 
-    .icons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 5px;
-      }
-
-    .icons .playButton {
-        font-size: 22px;
-        color: red;
-        border: none;
-        cursor: pointer;
+    /* show details button */
+    .icons{
+      width: 100%;
+      height: 30px;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .icons .favoriteIcon{
-        font-size: 22px;
-        cursor: pointer;
+    .icons Button{
+      font-size: 10px;
     }
 
-    .container .showMoreButton {
-      margin-top: auto;
+    /* show more button */
+    .showMoreContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
     }
 
+    
     .genres{
       font-size: 8px;
       font-weight: 800;
@@ -166,8 +169,6 @@
 @media only screen and (min-width: 476px) and (max-width: 750px){
     .container {
         padding: 5px;
-      
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -216,29 +217,31 @@
         font-size: 16px;
     }
 
-    .icons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 5px;
-      }
-
-    .icons .playButton {
-        font-size: 24px;
-        color: red;
-        border: none;
-        cursor: pointer;
+    /* show details button */
+    .icons{
+      width: 100%;
+      height: 30px;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .icons .favoriteIcon{
-        font-size: 24px;
-        cursor: pointer;
+    .icons Button{
+      font-size: 12px;
     }
 
-    .container .showMoreButton {
-      margin-top: auto;
+    /* show more button */
+    .showMoreContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
     }
 
+    
     .genres{
       font-size: 16px;
       font-weight: 800;
@@ -250,8 +253,6 @@
 @media only screen and (min-width: 751px) and (max-width: 979px){
     .container {
         padding: 5px;
-       
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -259,8 +260,6 @@
 
       }
 
-   
-    
       .heading_title {
         font-size: 20px;
         margin: 15px 10px;
@@ -300,29 +299,30 @@
         font-size: 16px;
     }
 
-    .icons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 5px;
-      }
-
-    .icons .playButton {
-        font-size: 24px;
-        color: red;
-        border: none;
-        cursor: pointer;
+    /* show details button */
+    .icons{
+      width: 100%;
+      height: 35px;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .icons .favoriteIcon{
-        font-size: 24px;
-        cursor: pointer;
+    .icons Button{
+      font-size: 12px;
+    }
+    /* show more button */
+    .showMoreContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; 
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
     }
 
-    .container .showMoreButton {
-      margin-top: auto;
-    }
-
+   
     .genres{
       font-size: 16px;
       font-weight: 800;
@@ -379,11 +379,16 @@
 
       /* show details button */
       .icons{
-        width: fit-content;
+        width: 100%;
+        height: 40px;
         margin-top: 20px; 
         border: 1px solid lightgrey;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
+        border-radius: 3px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      }
+  
+      .icons Button{
+        font-size: 16px;
       }
 
       /* show more button */
