@@ -1,26 +1,117 @@
 
 @media only screen and (max-width: 395px) {
-  
+  .topnav {
+    background-color: royalblue; 
+    overflow: hidden;
+  }
+
+  .topnav a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px; 
+    display: flex;
+    align-items: center; 
+  }
+
+  .title {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+
+  .logo{
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+  }
 }
 
 
 @media only screen and (min-width: 395px) and (max-width: 475px){
- 
+  .topnav {
+    background-color: royalblue; 
+    overflow: hidden;
+  }
+
+  .topnav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px; 
+    display: flex;
+    align-items: center; 
+  }
+
+  .title {
+    margin-left: 8px;
+  }
+
+  .logo{
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+  }
   
 }
 
 
 @media only screen and (min-width: 476px) and (max-width: 750px){
+  .topnav {
+    background-color: royalblue; 
+    overflow: hidden;
+  }
 
+  .topnav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px; 
+    display: flex;
+    align-items: center; 
+  }
+
+  .title {
+    margin-left: 8px;
+  }
+
+  .logo{
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+  }
 }
 
 
 @media only screen and (min-width: 751px) and (max-width: 979px){
+  .topnav {
+    background-color: royalblue; 
+    overflow: hidden;
+  }
 
+  .topnav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px; 
+    display: flex;
+    align-items: center; 
+  }
+
+  .title {
+    margin-left: 8px;
+  }
+
+  .logo{
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+  }
 }
 
 @media only screen and (min-width: 979px) and (max-width: 1500px){
-
 
   .topnav {
     background-color: royalblue; 
@@ -28,7 +119,6 @@
   }
 
   .topnav a {
-    float: left;
     color: white;
     text-align: center;
     padding: 14px 16px;
