@@ -38,9 +38,9 @@ function ShowCard({ show, onShowDetails }) {
 
   return (
     <div className={styles.card}>
+      <h3 className={styles.title}>{show.title}</h3>
       <img src={show.image} alt={show.title} />
       <div className={styles.cardBody}>
-        <h3 className={styles.title}>{show.title}</h3>
         <p className={styles.seasons}>Seasons: {show.seasons}</p>
         <p className={styles.episodes}>Episodes: {show.episodes}</p>
         <p className={styles.date}>Last Updated: {new Date(show.updated).toLocaleDateString()}</p>

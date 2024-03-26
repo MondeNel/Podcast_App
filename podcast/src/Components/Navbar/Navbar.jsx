@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className={styles.topnav}> 
       <a className={styles.active} href="#home">
         <img src={logoNote} alt="Logo" className={styles.logo} /> 
-        <h2 className={styles.title}>Podcast3000</h2>
+        <h2 className={styles.title}>Moonshoot3000</h2>
       </a>
       <Search />
     </div>

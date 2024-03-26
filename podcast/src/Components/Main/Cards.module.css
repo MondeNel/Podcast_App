@@ -1,8 +1,6 @@
 @media only screen and (max-width: 395px) {
     .container {
-        padding: 5px;
         box-shadow: 1px solid black;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -19,7 +17,7 @@
       .cardList {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 20px;
         padding: 20px 10px;
       }
       
@@ -29,7 +27,7 @@
         overflow: hidden;
         padding: 5px;
         border-radius: 6px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
       }
       
       .card img {
@@ -38,9 +36,7 @@
         border-radius: 4px;
       }
       
-      .cardBody {
-        padding: 10px;
-      }
+  
 
    .title {
         font-size: 10px;
@@ -159,9 +155,7 @@
 
 @media only screen and (min-width: 395px) and (max-width: 475px){
    .container {
-        padding: 15px;
-     
-
+    
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -178,8 +172,8 @@
       .cardList {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 20px 10px;
+        gap: 15px;
+        padding: 10px;
       }
       
       .card {
@@ -197,9 +191,7 @@
         height: auto;
       }
       
-      .cardBody {
-        padding: 10px;
-      }
+    
 
    .title {
         font-size: 10px;
@@ -317,7 +309,6 @@
 
 @media only screen and (min-width: 476px) and (max-width: 750px){
     .container {
-        padding: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -334,8 +325,8 @@
       
       .cardList {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
         padding: 20px 10px;
       }
       
@@ -354,12 +345,10 @@
         height: auto;
       }
       
-      .cardBody {
-        padding: 10px;
-      }
+   
 
    .title {
-        font-size: 16px;
+        font-size: 14px;
       } 
 
     .seasons, .episodes, .date {
@@ -491,7 +480,7 @@
       
       .cardList {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
         padding: 20px 10px;
       }
@@ -510,12 +499,10 @@
         height: auto;
       }
       
-      .cardBody {
-        padding: 10px;
-      }
+    
 
    .title {
-        font-size: 16px;
+        font-size: 14px;
       } 
 
     .seasons, .episodes, .date {
@@ -647,7 +634,7 @@
       .cardList {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        gap: 15px;
         padding: 20px 10px;
       }
       
@@ -665,9 +652,7 @@
         height: auto;
       }
       
-      .cardBody {
-        padding: 10px;
-      }
+      
 
 
      .seasons, .episodes, .date {
