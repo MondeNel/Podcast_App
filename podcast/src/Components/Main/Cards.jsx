@@ -142,21 +142,28 @@ function ShowList() {
   const showLimit = showAll ? totalShows : initialLimit;
 
   return (
+    <div className={styles.container}>
     <div className={styles.cardList}>
       {showsData.slice(0, showLimit).map((show) => (
         <ShowCard key={show.id} show={show} onShowDetails={(show) => {}} />
       ))}
-      {!showAll && (
-        <Button onClick={() => setShowAll(true)} className={styles.showMoreButton}>
-          Show more ({remainingShows} remaining)
-        </Button>
-      )}
+     
       {showAll && (
         showsData.slice(initialLimit).map((show) => (
           <ShowCard key={show.id} show={show} onShowDetails={(show) => {}} />
         ))
       )}
     </div>
+  
+    <div className={styles.showMoreContainer}>
+      {!showAll && (
+        <Button onClick={() => setShowAll(true)} className={styles.showMoreButton}>
+          Show more ({remainingShows} remaining)
+        </Button>
+      )}
+    </div>
+  </div>
+  
   );
 }
 

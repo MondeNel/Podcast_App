@@ -333,7 +333,6 @@
 @media only screen and (min-width: 979px) and (max-width: 1500px){
     .container {
         padding: 5px;
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -373,34 +372,30 @@
         padding: 10px;
       }
 
-   
 
-    .seasons, .episodes, .date {
+     .seasons, .episodes, .date {
         font-size: 16px;
-    }
+      }
 
-    .card .icons {
+      /* show details button */
+      .icons{
+        width: fit-content;
+        margin-top: 20px; 
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
+      }
+
+      /* show more button */
+      .showMoreContainer {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 10px;
-    }
-
-    .icons .playButton {
-        font-size: 28px;
-        color: red;
-        border: none;
-        cursor: pointer;
-    }
-
-    .icons .favoriteIcon{
-        font-size: 30px;
-        cursor: pointer;
-    }
-    
-    .container .showMoreButton {
-    margin-top: auto;
-    }
+        justify-content: center;
+        margin-top: 20px; 
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
+      }
+      
 
     .genres{
       font-size: 16px;
